@@ -5,7 +5,7 @@ image: /img/socialCards/thegraph-network.jpg
 
 # The Graph
 
-Getting historical data on smart contracts can be frustrating when building a dapp. [The Graph](https://thegraph.com/) offers a powerful way to query smart contract data with open APIs known as subgraphs. Subgraphs can be created or queried by anyone, making the data available to the entire ecosystem! The Graph is powered by hundreds of independent Indexers, enabling your dapp to become truly decentralized.
+Getting historical data on smart contracts can be frustrating when building a dapp. [The Graph](https://thegraph.com/) offers a powerful way to query smart contract data with open APIs known as subgraphs. Anyone can create or query subgraphs, making the data available to the entire ecosystem. The Graph is powered by hundreds of independent Indexers, enabling your dapp to become truly decentralized.
 
 Developers can use 100,000 free queries per month by using The Graph Network.
 
@@ -19,7 +19,7 @@ Subgraphs index emitted events by default (but more functionality can be added l
 
 Here is a step by step walk through:
 
-## 1. Initialize You Subgraph
+## 1. Initialize Your Subgraph
 
 ### Create a Subgraph on Subgraph Studio⁠
 
@@ -35,7 +35,7 @@ On your local machine run the following:
 npm install -g @graphprotocol/graph-cli
 ```
 
-### Initialize your Subgraph⁠
+### Initialize Your Subgraph⁠
 
 You can copy this directly from your subgraph page to include your specific subgraph slug:
 
@@ -67,7 +67,7 @@ $ graph deploy --studio <SUBGRAPH_SLUG>
 
 You will be asked for a version label. You can enter something like v0.0.1, but you’re free to choose the format.
 
-### Test your subgraph⁠
+### Test Your Subgraph⁠
 
 You can test your subgraph by making a sample query in the playground section. The Details tab will show you an API endpoint. You can use that endpoint to test from your dapp.
 
@@ -81,7 +81,7 @@ When publishing, you’ll see the option to curate your subgraph. As of May 2024
 
 > **Note:** The Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Ethereum, BSC or any other [supported chain](https://thegraph.com/docs/en/developing/supported-networks/).
 
-## 3. Query your Subgraph
+## 3. Query Your Subgraph
 
 Congratulations! You can now query your subgraph on the decentralized network!
 
@@ -95,7 +95,7 @@ The query URL for this subgraph is:
 
 Now, you simply need to  fill in your own API Key to start sending GraphQL queries to this endpoint.
 
-### Getting your own API Key
+### Getting Your Own API Key
 
 In Subgraph Studio, you’ll see the “API Keys” menu at the top of the page. Here you can create API Keys.
 
@@ -131,7 +131,7 @@ Passing this into the query URL returns this result:
 //      ...
 ```
 
-### Sample code
+### Sample Code
 
 ```jsx
 const axios = require("axios");
@@ -166,21 +166,9 @@ axios(graphQLRequest)
   });
 ```
 
-### Additional resources:
+### Additional Resources:
 
 - To explore all the ways you can optimize & customize your subgraph for better performance, read more about [creating a subgraph here](https://thegraph.com/docs/en/developing/creating-a-subgraph/).
 - For more information about querying data from your subgraph, read more [here](https://thegraph.com/docs/en/querying/querying-the-graph/).
-
-As a dapp developer, retrieving on-chain data for your dapp can be challenging because you will most likely:
-
-1. Consume your RPC provider quota with calls.
-2. Need to implement error handling on multiple levels.
-3. Define creative strategies to avoid UX impacts when managing a high volume of data.
-
-The Graph is a decentralized data indexer provider that indexes the Linea blockchain for you and exposes on-chain data through an HTTPS API.
-
-We run The Graph indexers on Linea to allow you to leverage the power of this technology. :::info[update]
-
-TheGraph is now live with Linea Mainnet! For more information, take a look at their official [documentation](https://thegraph.com/docs/en/)
 
 :::
